@@ -1,0 +1,12 @@
+.*
+!.gitignore
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+target
+build
+out
+gradle
+gradlew
+gradlew.bat

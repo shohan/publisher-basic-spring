@@ -11,13 +11,15 @@ import java.util.List;
 @Service(value = "bookService")
 public class BookServiceImpl implements BookService {
 
+    @Autowired
     private BookRepository bookRepository;
 
 
     public BookServiceImpl() {
         System.out.println("BookServiceImpl no args constructor");
     }
-    @Autowired
+
+
     public BookServiceImpl(BookRepository bookRepository) {
         System.out.println("BookServiceImpl  constructor");
         this.bookRepository = bookRepository;

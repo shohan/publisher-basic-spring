@@ -10,8 +10,11 @@ public class AppConfig {
 
     @Bean(name = "bookService")
     public BookService getBookService() {
-        BookServiceImpl bookService = new BookServiceImpl();
-        bookService.setBookRepository(getBookRepository());
+
+        BookServiceImpl bookService = new BookServiceImpl(getBookRepository());
+        //for setter injection
+//        BookServiceImpl bookService = new BookServiceImpl();
+//        bookService.setBookRepository(getBookRepository());
         return bookService;
     }
 

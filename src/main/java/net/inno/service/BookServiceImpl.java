@@ -17,7 +17,7 @@ public class BookServiceImpl implements BookService {
     public BookServiceImpl() {
         System.out.println("BookServiceImpl no args constructor");
     }
-
+    @Autowired
     public BookServiceImpl(BookRepository bookRepository) {
         System.out.println("BookServiceImpl  constructor");
         this.bookRepository = bookRepository;
@@ -28,7 +28,7 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findAll();
     }
 
-    @Autowired
+
     public void setBookRepository(BookRepository bookRepository) {
         System.out.println("BookServiceImpl Setter");
         this.bookRepository = bookRepository;

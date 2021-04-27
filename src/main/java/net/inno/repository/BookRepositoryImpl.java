@@ -1,10 +1,12 @@
 package net.inno.repository;
 
 import net.inno.domian.Book;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository(value = "bookRepository")
 public class BookRepositoryImpl implements BookRepository {
 
     @Override

@@ -23,10 +23,10 @@ public class AppConfig {
         // for autowired
         BookServiceImpl bookService = new BookServiceImpl();
         return bookService;
-    }*/
+    }
 
     @Bean(name = "bookRepository")
     public BookRepository getBookRepository(){
         return new BookRepositoryImpl();
-    }
+    }*/
 }

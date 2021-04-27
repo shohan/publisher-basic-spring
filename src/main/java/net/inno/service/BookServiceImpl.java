@@ -8,9 +8,13 @@ import java.util.List;
 
 public class BookServiceImpl implements BookService {
 
-    private BookRepository bookRepository = new BookRepositoryImpl();
+    private BookRepository bookRepository;
     @Override
     public List<Book> findAll() {
         return bookRepository.findAll();
+    }
+
+    public void setBookRepository(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
     }
 }

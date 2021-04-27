@@ -7,10 +7,8 @@ public class Application {
         ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
         BookService service = appContext.getBean("bookService", BookService.class);
-        System.out.println(service);
+
         System.out.println(service.findAll().get(0).getTitle());
 
-        BookService service1 = appContext.getBean("bookService", BookService.class);
-        System.out.println(service1);
     }
 }

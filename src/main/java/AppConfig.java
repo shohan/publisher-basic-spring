@@ -13,11 +13,13 @@ public class AppConfig {
     @Bean(name = "bookService")
     @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
     public BookService getBookService() {
-
-        BookServiceImpl bookService = new BookServiceImpl(getBookRepository());
+// for constructor
+//        BookServiceImpl bookService = new BookServiceImpl(getBookRepository());
         //for setter injection
 //        BookServiceImpl bookService = new BookServiceImpl();
 //        bookService.setBookRepository(getBookRepository());
+        // for autowired
+        BookServiceImpl bookService = new BookServiceImpl();
         return bookService;
     }
 

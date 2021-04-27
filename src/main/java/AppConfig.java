@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Scope;
 public class AppConfig {
 
     @Bean(name = "bookService")
-    @Scope(value = BeanDefinition.SCOPE_SINGLETON)
+    @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
     public BookService getBookService() {
 
         BookServiceImpl bookService = new BookServiceImpl(getBookRepository());

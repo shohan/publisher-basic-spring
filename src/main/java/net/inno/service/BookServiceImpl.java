@@ -4,9 +4,11 @@ import net.inno.domian.Book;
 import net.inno.repository.BookRepository;
 import net.inno.repository.BookRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service(value = "bookService")
 public class BookServiceImpl implements BookService {
 
     private BookRepository bookRepository;

@@ -4,13 +4,15 @@ import net.inno.service.BookService;
 import net.inno.service.BookServiceImpl;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
+@ComponentScan({"net.inno"})
 public class AppConfig {
 
-    @Bean(name = "bookService")
+   /* @Bean(name = "bookService")
     @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
     public BookService getBookService() {
 // for constructor
@@ -21,7 +23,7 @@ public class AppConfig {
         // for autowired
         BookServiceImpl bookService = new BookServiceImpl();
         return bookService;
-    }
+    }*/
 
     @Bean(name = "bookRepository")
     public BookRepository getBookRepository(){
